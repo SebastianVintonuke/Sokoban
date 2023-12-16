@@ -1,4 +1,4 @@
-// --- SOKOBAN --- //
+# SOKOBAN
 
 Sokoban es un clásico rompecabezas inventado en Japón, normalmente implementado como videojuego. El juego original fue creado por Hiroyuki Imabayashi, que en 1980 ganó con su juego una competición contra un ordenador. Hiroyuki Imabayashi es presidente de la empresa Thinking Rabbit Inc. en Japón. Con los años han aparecido muchas versiones del juego para todas las plataformas, y continuamente se crean nuevas colecciones de niveles.
 
@@ -6,31 +6,29 @@ Sokoban significa "encargado de almacén" en japonés. El objetivo del juego es 
 
 https://es.wikipedia.org/wiki/Sokoban
 
-// --- DEPENDENCIAS --- //
+### DEPENDENCIAS
 
 Gamelib is a pure-Python single-file library/framework for writing simple games.
 https://github.com/dessaya/python-gamelib
 
 Incluido, aunque tambien puede consultar la ultima version.
 
-// --- INICIAR --- //
+### INICIAR
 
-python main.py
+`python main.py` or `python3 main.py`
 
-python3 main.py
+### CONTROLES
 
-// --- CONTROLES --- //
+- Flecha arriba o W = subir
+- Flecha izquierda o A = ir hacia la izquierda
+- Flecha abajo o S = bajar
+- Flecha derecha o D = ir hacia la derecha
+- R = reiniciar
+- Escape = salir
+- Z = deshacer
+- H = pista
 
-Flecha arriba o W = subir
-Flecha izquierda o A = ir hacia la izquierda
-Flecha abajo o S = bajar
-Flecha derecha o D = ir hacia la derecha
-R = reiniciar
-Escape = salir
-Z = deshacer
-H = pista
-
-// --- ACERCA DEL PROYECTO --- //
+### ACERCA DEL PROYECTO
 
 soko.py incluye las funciones necesarias para manejar la logica del juego.
 
@@ -38,8 +36,11 @@ backtraking.py incluye las funciones de backtracking, utilizadas para proporcion
 
 IMPORTANTE
 A partir del nivel 5 utilizar pistas (H) produce el siguiente error:
-RecursionError: maximum recursion depth exceeded while calling a Python object
+
+`RecursionError: maximum recursion depth exceeded while calling a Python object`
+
 Por seguridad python limita la cantidad de llamadas recursivas a 999, asi evita la recursion infinita para no hacer overflow en el stack de C.
+
 La complejidad del nivel 5 ya es suficiente para superar este numero. Se podria deslimitar pero no tendria mucho sentido, el proyecto es puramente didactico.
 (para mas informacion: https://docs.python.org/2/library/sys.html#sys.getrecursionlimit)
 
@@ -49,6 +50,7 @@ Usted podria general sus propios niveles y agregarlos en el archivo niveles.txt:
 La descripción es una lista de cadenas, cada cadena representa una
 fila y cada caracter una celda. Los caracteres pueden ser los siguientes:
 
+```
     Caracter  Contenido de la celda
     --------  ---------------------
            #  Pared
@@ -66,14 +68,14 @@ fila y cada caracter una celda. Los caracteres pueden ser los siguientes:
         '#@  #',
         '#####',
     ]
+```
 
 Asegurese de utilizar el tipado correctamente siguiendo la estructura del resto de niveles.
 Usted puede modificar el nivel inicial desde main.py en la linea 99.
 
-// -- Mi Nombre -- //
-// -- Sebastian M. Vintoñuke -- //
+### Sebastian M. Vintoñuke
+### Contact Information:
 
-// -- Contacto -- //
-// -- sebastian.m.vintonuke@gmail.com -- //
-// -- https://github.com/SebastianVintonuke -- //
-// -- https://www.linkedin.com/in/sebastian-vintoñuke-7ab06a161/ -- //
+- [GitHub](https://github.com/SebastianVintonuke)
+- [LinkedIn](https://www.linkedin.com/in/sebastian-vintoñuke-7ab06a161/)
+- sebastian.m.vintonuke@gmail.com
